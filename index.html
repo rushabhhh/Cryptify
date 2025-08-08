@@ -279,6 +279,76 @@
       border-radius: 0 0 var(--radius) var(--radius);
       margin-top: 1.5rem;
     }
+    /* Coming Soon App Section */
+    .app-coming {
+      background: linear-gradient(135deg, #1e1e2e 60%, #2b005b 100%);
+      box-shadow: 0 4px 24px 0 rgba(123,47,247,0.15);
+    }
+    .app-coming .store-buttons {
+      margin-top: 1.5rem;
+      display: flex;
+      justify-content: center;
+      gap: 1rem;
+      flex-wrap: wrap;
+    }
+    .app-coming .store-buttons img {
+      height: 50px;
+      transition: var(--transition);
+      cursor: pointer;
+    }
+    .app-coming .store-buttons img:hover {
+      transform: scale(1.08);
+    }
+    /* Add these styles to your existing <style> section */
+    .features-grid {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 1.5rem;
+      margin: 1.5rem 0;
+    }
+    
+    .feature {
+      background: rgba(123,47,247,0.08);
+      border-radius: var(--radius);
+      padding: 1.5rem;
+      flex: 1 1 220px;
+      max-width: 280px;
+      transition: var(--transition);
+    }
+    
+    .feature:hover {
+      transform: translateY(-5px);
+      background: rgba(123,47,247,0.12);
+      box-shadow: 0 8px 28px 0 rgba(123,47,247,0.15);
+    }
+    
+    .feature-icon {
+      font-size: 2rem;
+      display: block;
+      margin-bottom: 0.5rem;
+    }
+    
+    .feature h3 {
+      color: var(--secondary);
+      margin-bottom: 0.5rem;
+      font-size: 1.1rem;
+    }
+    
+    .app-coming p {
+      max-width: 800px;
+      margin-left: auto;
+      margin-right: auto;
+      line-height: 1.7;
+    }
+    
+    /* Media query for features grid */
+    @media (max-width: 700px) {
+      .feature {
+        min-width: 90vw;
+        max-width: 98vw;
+      }
+    }
     /* Responsive Styles */
     @media (max-width: 1100px) {
       .cards { gap: 1.1rem; }
@@ -327,7 +397,7 @@
   <section class="hero">
     <div class="hero-content">
       <h2>Crypto Payments Made Simple</h2>
-      <p>The first unified platform that brings together cryptocurrency and INR transactions in one seamless experience.</p>
+      <p>The first unified crypto payment app that brings together cryptocurrency and INR transactions in one seamless mobile experience.</p>
       <button onclick="document.getElementById('about').scrollIntoView({behavior: 'smooth'})">Learn More</button>
     </div>
     <div>
@@ -337,7 +407,38 @@
 
   <section class="section about" id="about">
     <h2>About Cryptify</h2>
-    <p>At Cryptify, we're bridging the gap between crypto and everyday users by making crypto payments feel like UPI – simple, fast, and affordable. Whether you're a beginner or a pro, Cryptify empowers you to manage and send crypto effortlessly.</p>
+    <p>At Cryptify, we're bridging the gap between crypto and everyday users by making crypto payments feel like UPI – simple, fast, and affordable. Our mobile app empowers you to manage and send crypto effortlessly, whether you're a beginner or a pro.</p>
+  </section>
+
+  <!-- Move the app-coming section up here, right after the About section -->
+  <section class="section app-coming">
+    <h2>📱 Get the Cryptify App</h2>
+    <p>Our mobile application is in the final stages of development! With the Cryptify app, you'll be able to send and receive crypto directly from your phone with UPI-like simplicity — anytime, anywhere.</p>
+    
+    <div class="features-grid">
+      <div class="feature">
+        <span class="feature-icon">🔒</span>
+        <h3>Secure Wallet</h3>
+        <p>State-of-the-art encryption and biometric authentication</p>
+      </div>
+      <div class="feature">
+        <span class="feature-icon">⚡</span>
+        <h3>Lightning Fast</h3>
+        <p>Complete transactions in seconds</p>
+      </div>
+      <div class="feature">
+        <span class="feature-icon">🌐</span>
+        <h3>Cross-Chain</h3>
+        <p>Support for multiple cryptocurrencies</p>
+      </div>
+    </div>
+    
+    <div class="store-buttons">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg" alt="Google Play" />
+      <img src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg" alt="App Store" />
+    </div>
+    
+    <p style="margin-top: 1rem; opacity: 0.8;">Available on Android & iOS soon.</p>
   </section>
 
   <section class="section">
